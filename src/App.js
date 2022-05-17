@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import ImageGrid from './components/ImageGrid';
+import Modal from './components/Modal'
 
 const App = () => {
   const [images, setImages] = useState();
@@ -33,7 +34,10 @@ const App = () => {
     }, []);
 
   return (
-    <ImageGrid images={images}/>
+    <>
+      <Modal />
+      <ImageGrid images={images}/>
+    </>
   );
 }
 
