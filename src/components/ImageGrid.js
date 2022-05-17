@@ -2,6 +2,7 @@ export default function ImageGrid({images}){
     return (
         <>
         <div className='container'></div>
+        <h1 className="fw-light text-center text-lg-start mt-4 mb-0">Gallery</h1>
             <div className='row text-center text-lg-start'>
                 {
                     images && images.map(img => (
@@ -13,12 +14,12 @@ export default function ImageGrid({images}){
                         {`Likes: ${img.likes}`}
                       </div>
                     </div>
+                    </div>
                             <div>
                                 Added by {img.user.name}
                                 <br/>
                                 <img className="user-image" src={`${img.user.profile_image}.webp`} alt='avatar of user who uploaded car image'/>
                             </div>
-                        </div>
                     </div>
                     ))
                 }
