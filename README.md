@@ -12,7 +12,7 @@ I used bootstrap and HTML/CSS to create a responsive grid to display the images.
 
 ### 2. Performance
 
-I created another API endpoint in the server code to get the images without the time delay (as set out in the setTimeout function in the original endpoint). I left the original one in to compare the fetching times for both which I have measured using console.time() and console.timeEnd().
+I created another API endpoint in the server code to get the images without the time delay (as set out in the setTimeout function in the original endpoint). I left the original one in to compare the fetching times for both. I used console.time() and console.timeEnd() to measure this so both times can be viewed in the console - and it demonstrates (on average) that timer2 (new endpoint) is faster than timer1 (original endpoint).
 
 
 ### 3. Forms
