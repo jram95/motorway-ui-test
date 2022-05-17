@@ -21,6 +21,17 @@ const App = () => {
       });
   }, []);
 
+    // measure  time taken to receive API data using faster endpoint /load-images-faster for comparison 'timer2'
+    useEffect(() => {
+      console.time('timer2')
+      fetch('load-images-faster?limit=10')
+        .then(res => {res.json();
+          console.timeEnd("timer2");})
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }, []);
+
   return (
     <ImageGrid images={images}/>
   );
