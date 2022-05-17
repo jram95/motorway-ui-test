@@ -1,7 +1,8 @@
 export default function ImageGrid({images}){
     return (
         <>
-            <div className='app'>
+        <div className='container'></div>
+            <div className='row text-center text-lg-start'>
                 {
                     images && images.map(img => (
                     <div key={img.id} >
