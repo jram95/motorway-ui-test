@@ -5,6 +5,7 @@ import Modal from './components/Modal'
 
 const App = () => {
   const [images, setImages] = useState();
+  const [show, setShow] = useState(false)
 
   // receive response from API and set images state to that data
   // measure time taken to receive API data and log to console as 'timer1'
@@ -35,7 +36,7 @@ const App = () => {
 
   return (
     <>
-      <Modal />
+      <Modal show={show}/>
       <ImageGrid images={images}/>
     </>
   );
