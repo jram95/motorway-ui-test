@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import ImageGrid from './components/ImageGrid';
 
 const App = () => {
   const [images, setImages] = useState();
@@ -17,16 +18,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className='app'>
-      {
-        images && images.map(img => (
-          <div key={img.id} >
-            <img src={`${img.url}.jpg`} alt=''/>
-            <img src={`${img.user.profile_image}.webp`} alt=''/>
-          </div>
-        ))
-      }
-    </div>
+    <ImageGrid images={images}/>
   );
 }
 
