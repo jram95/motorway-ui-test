@@ -15,6 +15,14 @@ app.get('/images', ({ query }, res) => {
   }, randomInterval(500, 1500));
 });
 
+// GET images without the time delay
+app.get('/load-images-faster', ({ query }, res) => {
+  const i = (query.limit) ? images.slice(0, parseInt(query.limit)) : images;
+
+  res.json(i)
+
+})
+
 app.listen(5000, () => {
   process.stdout.write('Server is available on http://localhost:5000/\n');
 });
