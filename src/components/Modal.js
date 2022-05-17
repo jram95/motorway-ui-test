@@ -1,4 +1,4 @@
-export default function Modal(){
+export default function Modal({show}){
 
     return (
         <>
