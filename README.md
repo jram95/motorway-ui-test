@@ -1,10 +1,6 @@
 
 # Motorway UI Test
 
-
-install whatever code you feel is necessary. If installing packages which are wrappers for native browsers APIs please leave a comment explaining why.
-
-
 ## Tasks
 
 ### 1. UI development
