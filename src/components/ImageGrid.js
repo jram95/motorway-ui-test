@@ -3,8 +3,6 @@ export default function ImageGrid({images}){
         <>
         <div className="container">
 
-        <h1 className="fw-light text-center text-lg-start mt-4 mb-0">Gallery</h1>
-
         <div className="row text-center text-lg-start">
             {
                 images && images.map(img => (

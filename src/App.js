@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import ImageGrid from './components/ImageGrid';
+import Modal from './components/Modal'
 
 const App = () => {
   const [images, setImages] = useState();
+  const [show, setShow] = useState(false)
 
   // receive response from API and set images state to that data
   // measure time taken to receive API data and log to console as 'timer1'
@@ -33,7 +35,14 @@ const App = () => {
     }, []);
 
   return (
-    <ImageGrid images={images}/>
+    <>
+      <h1 className="fw-light text-center text-lg-start mt-4 mb-0">Gallery</h1>
+      <div className='modal-button'>
+        <button type="button" class="btn btn-light" onClick={()=>{setShow(true)}}>Open Form</button>
+      </div>
+      <Modal show={show} onClose = {() => {setShow(false)}}/>
+      <ImageGrid images={images}/>
+    </>
   );
 }
 
