@@ -36,8 +36,12 @@ export default function Modal({show, onClose}){
                             </div>
 
                             <div class="form-group">
-                                <label for="salary">Salary expectations (range)</label>
-                                <input type="text" class="form-control" id="salary" aria-describedby="salary" placeholder="e.g. 25000-30000" />
+                                <label for="customRange3" class="form-label">Salary</label>
+                                <div class="slidecontainer">
+                                    <label for="min" class="pull-left">20000</label>
+                                    <input type="range" min="20000" max="80000"  class="slider" id="myRange" />
+                                    <label for="max" class="pull-right">80000</label>
+                                </div>
                             </div>
                             
                         </form>
