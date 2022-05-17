@@ -13,7 +13,7 @@ export default function Modal({show, onClose}){
                     </div>
                     <div className='modal-body'>
                         <form>
-                            
+
                             <div class="form-group">
                                 <label for="fullName">Full Name</label>
                                 <input type="password" class="form-control" id="fullName" placeholder="Please enter your full name" />
@@ -42,8 +42,13 @@ export default function Modal({show, onClose}){
                             
                         </form>
                         </div>
-                        <div className='modal-footer'>
-                            <button type="button" class="btn btn-success" onClick={onClose}>Submit</button>
+                            <div className='modal-footer'>
+                                <div>
+                                <button type="button" class="btn btn-dark" onClick={onClose}>Close</button>
+                            </div>
+                            <div className='modal-footer'>
+                                <button type="button" class="btn btn-success" onClick={onClose}>Submit</button>
+                            </div>
                         </div>
                  </div>
             </div>
