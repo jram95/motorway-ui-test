@@ -18,7 +18,7 @@ export default function ImageGrid({images}){
                             <div>
                                 Added by {img.user.name}
                                 <br/>
-                                <img className="user-image" src={`${img.user.profile_image}.webp`} alt='avatar of user who uploaded car image'/>
+                                <img className="user-image" src={`${img.user.profile_image}.webp`} alt='avatar of user who added post'/>
                             </div>
                     </div>
                     ))
