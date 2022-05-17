@@ -36,7 +36,11 @@ const App = () => {
 
   return (
     <>
-      <Modal show={show}/>
+      <h1 className="fw-light text-center text-lg-start mt-4 mb-0">Gallery</h1>
+      <div className='modal-button'>
+        <button type="button" class="btn btn-light" onClick={()=>{setShow(true)}}>Open Form</button>
+      </div>
+      <Modal show={show} onClose = {() => {setShow(false)}}/>
       <ImageGrid images={images}/>
     </>
   );
