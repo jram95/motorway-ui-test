@@ -4,6 +4,12 @@ export default function Modal({show, onClose}){
         return null
     }
 
+    function handleChange(event){
+        if (event.target.value.length > 10){
+            alert('Full name has to be 10 characters or lower')
+        }
+    }
+
     return (
         <>
             <div className='modal'>
@@ -14,33 +20,33 @@ export default function Modal({show, onClose}){
                     <div className='modal-body'>
                         <form>
 
-                            <div class="form-group">
-                                <label for="fullName">Full Name</label>
-                                <input type="password" class="form-control" id="fullName" placeholder="Please enter your full name" />
+                            <div className="form-group">
+                                <label htmlFor="fullName">Full Name</label>
+                                <input type="text" className="form-control" id="fullName" placeholder="Please enter your full name" onChange={(event) => handleChange(event)}/>
                             </div>
 
-                            <div class="form-group">
-                                <label for="Email">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Please enter your email" />
+                            <div className="form-group">
+                                <label htmlFor="Email">Email address</label>
+                                <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Please enter your email" />
                             </div>
 
-                            <div class="form-group">
-                                <label for="DOB">Date of Birth</label>
-                                <input type="datetime" class="form-control" id="dob" aria-describedby="dob" placeholder="Please enter your DOB" />
-                                <small id="dob" class="form-text text-muted">Format DD/MM/YYYY.</small>
+                            <div className="form-group">
+                                <label htmlFor="DOB">Date of Birth</label>
+                                <input type="datetime" className="form-control" id="dob" aria-describedby="dob" placeholder="Please enter your DOB" />
+                                <small id="dob" className="form-text text-muted">Format DD/MM/YYYY.</small>
                             </div>
   
-                            <div class="form-group">
-                                <label for="colour">Favourite Colour</label>
-                                <input type="text" class="form-control" id="colour" aria-describedby="colour" placeholder="e.g green" />
+                            <div className="form-group">
+                                <label htmlFor="colour">Favourite Colour</label>
+                                <input type="text" className="form-control" id="colour" aria-describedby="colour" placeholder="e.g green" />
                             </div>
 
-                            <div class="form-group">
-                                <label for="customRange3" class="form-label">Salary</label>
-                                <div class="slidecontainer">
-                                    <label for="min" class="pull-left">20000</label>
-                                    <input type="range" min="20000" max="80000"  class="slider" id="myRange" />
-                                    <label for="max" class="pull-right">80000</label>
+                            <div className="form-group">
+                                <label htmlFor="customRange3" className="form-label">Salary</label>
+                                <div className="slidecontainer">
+                                    <label htmlFor="min" className="pull-left">20000</label>
+                                    <input type="range" min="20000" max="80000"  className="slider" id="myRange" />
+                                    <label htmlFor="max" className="pull-right">80000</label>
                                 </div>
                             </div>
                             
